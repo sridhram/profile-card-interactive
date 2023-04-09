@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+:root{
+    --body-bg:hsl(185, 75%, 39%);
+    --head-clr:hsl(229, 23%, 23%);
+    --desc-clr: hsl(227, 10%, 46%);
+    --container-clr:hsl(0, 0%, 100%);
+    --font: 'Kumbh Sans', sans-serif;
+}
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: grid;
+    min-height: 100vh;
+    place-content: center;
+    background-color: var(--body-bg);
+    font-family: var(--font);
+}
+
+picture,img{
+    display: block;
+    max-width: 100%;
+}
+
+.profile-stats{
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    justify-content: space-evenly;
+    text-align: center;
+    border-top: 1px solid hsla(0deg 0% 59% / 21%);
+    padding: 1.5rem 0.5rem;
+}
+
+.main-container{
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 1.5rem;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    z-index: 1;
+}
+
+body::before{
+    content: '';
+    background: url(./images/bg-pattern-top.svg) no-repeat;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-position: -9vw -65vh;
+}
+body::after {
+    content: '';
+    background: url(./images/bg-pattern-bottom.svg) no-repeat;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-position: 49vw 50vh;
+}
+.profile-img{
+    border-radius: 50%;
+    padding: 0.3rem;
+    margin-top: -3.3rem;
+    background-color: var(--container-clr);
+}
+
+.user-desc{
+    margin-block-start: 2rem;
+}
+
+.f700{
+    font-weight: 700;
+    color: var(--head-clr);
+    font-size: 1.3rem;
+}
+
+.f400 {
+    font-weight: 400;
+    color: var(--desc-clr);
+}
+
+.stats-head{
+    font-size: .7rem;
+    letter-spacing: 2px;
+    margin-block-start: 0.5rem;
+}
+
+.age{
+    font-size: 1.3rem;
+    padding-inline-start: 0.5rem;
+}
+
+.place{
+    margin-block-end: 1.5rem;
+}
+
+.top-bg{
+    position: absolute;
+    bottom: 330px;
+    right: 586px;
+}
+
+.bottom-bg{
+    position: absolute;
+    top: 445px;
+    left: 550px;
+}
